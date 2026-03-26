@@ -1,0 +1,27 @@
+{
+  "name": "Student IT Hub - Online Programming Institute",
+  "short_name": "Student IT Hub",
+  "description": "Online Programming Institute offering industry-level training in React, Python, Java, and more by Ravi Sir.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a365d",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/src/images/lgo1st-removebg-preview.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/src/images/lgo1st-removebg-preview.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
