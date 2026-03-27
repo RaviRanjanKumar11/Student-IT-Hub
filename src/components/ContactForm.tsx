@@ -44,7 +44,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <p className="text-xs font-black text-gray-300 uppercase tracking-widest mb-1">Call Us</p>
-                  <p className="text-xl font-black text-brand-primary">+91 98765 43210</p>
+                  <p className="text-xl font-black text-brand-primary">+91 6200771962</p>
                 </div>
               </div>
               <div className="flex items-center space-x-6">
@@ -53,7 +53,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <p className="text-xs font-black text-gray-300 uppercase tracking-widest mb-1">Email Us</p>
-                  <p className="text-xl font-black text-brand-primary">info@studentithub.com</p>
+                  <p className="text-xl font-black text-brand-primary">ravi.r.kr.9199@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center space-x-6">
@@ -84,7 +84,7 @@ export default function ContactForm() {
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
                     className="w-full px-6 py-4 rounded-2xl border-2 border-gray-100 focus:border-brand-secondary outline-none transition-all font-bold text-brand-primary"
-                    placeholder="John Doe"
+                    placeholder="Mr Kumar"
                   />
                 </div>
                 <div>
@@ -95,7 +95,7 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                     className="w-full px-6 py-4 rounded-2xl border-2 border-gray-100 focus:border-brand-secondary outline-none transition-all font-bold text-brand-primary"
-                    placeholder="john@example.com"
+                    placeholder="ravi.r.kr.9199@gmail.com"
                   />
                 </div>
               </div>
@@ -108,7 +108,7 @@ export default function ContactForm() {
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
                     className="w-full px-6 py-4 rounded-2xl border-2 border-gray-100 focus:border-brand-secondary outline-none transition-all font-bold text-brand-primary"
-                    placeholder="+91 00000 00000"
+                    placeholder="+91 6200771962"
                   />
                 </div>
                 <div>

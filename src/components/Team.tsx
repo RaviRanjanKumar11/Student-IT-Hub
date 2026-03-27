@@ -1,29 +1,53 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { Github, Linkedin, Twitter } from 'lucide-react';
+import ravi from '../images/Rv.png';
+
+const typePhrases = [
+  'Mentoring the next generation.',
+  'Empowering creators.',
+  'Building real-world skills.'
+];
+const marqueeText = '⭐ Join our team in building amazing software, mentorship & innovation! ⭐ ';
 
 const team = [
   {
     name: "Ravi Sir",
     role: "Founder & Lead Instructor",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
+    image: ravi,
     bio: "Software Developer with 3+ years of experience. Passionate about teaching and building scalable systems."
-  },
-  {
-    name: "Anjali Singh",
-    role: "Frontend Specialist",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400",
-    bio: "Expert in React and modern UI/UX design. Helping students build beautiful web interfaces."
-  },
-  {
-    name: "Vikram Raj",
-    role: "Backend Architect",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400",
-    bio: "Specializes in Python, Java, and Cloud infrastructure. Focused on teaching robust backend development."
   }
 ];
 
 export default function Team() {
+  const [typed, setTyped] = useState('');
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentPhrase = typePhrases[phraseIndex];
+    const delta = isDeleting ? 60 : 120;
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        if (typed.length < currentPhrase.length) {
+          setTyped(currentPhrase.slice(0, typed.length + 1));
+        } else {
+          setIsDeleting(true);
+        }
+      } else {
+        if (typed.length > 0) {
+          setTyped(currentPhrase.slice(0, typed.length - 1));
+        } else {
+          setIsDeleting(false);
+          setPhraseIndex((prev) => (prev + 1) % typePhrases.length);
+        }
+      }
+    }, typed.length === currentPhrase.length && !isDeleting ? 1200 : delta);
+
+    return () => clearTimeout(timeout);
+  }, [typed, isDeleting, phraseIndex]);
+
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -45,9 +69,15 @@ export default function Team() {
           >
             MEET THE <span className="text-brand-secondary">TEAM</span>
           </motion.h2>
+          <p className="mt-6 text-lg font-semibold text-brand-muted">{typed}<span className="text-brand-secondary">|</span></p>
+          <div className="mt-5 overflow-hidden border-t border-b border-brand-surface py-3">
+            <div className="team-marquee whitespace-nowrap text-sm font-semibold text-brand-primary" aria-label="Team marquee">
+              {marqueeText.repeat(4)}
+            </div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid justify-center gap-2">
           {team.map((member, index) => (
             <motion.div
               key={index}
@@ -58,7 +88,7 @@ export default function Team() {
               className="group"
             >
               <div className="relative mb-8">
-                <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
+                <div className="aspect-4/5 rounded-[3rem] overflow-hidden shadow-2xl">
                   <img 
                     src={member.image} 
                     alt={member.name} 
@@ -75,7 +105,7 @@ export default function Team() {
               <div className="text-center">
                 <h3 className="text-2xl font-black text-brand-primary tracking-tight">{member.name}</h3>
                 <p className="text-brand-secondary font-bold text-xs uppercase tracking-widest mt-1 mb-4">{member.role}</p>
-                <p className="text-brand-muted font-medium text-sm leading-relaxed max-w-[250px] mx-auto">
+                <p className="text-brand-muted font-medium text-sm leading-relaxed max-w-62.5 mx-auto">
                   {member.bio}
                 </p>
               </div>

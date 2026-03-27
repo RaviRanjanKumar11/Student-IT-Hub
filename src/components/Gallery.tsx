@@ -3,7 +3,7 @@ import { galleryImages } from '../constants';
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-24 bg-white">
+    <section id="gallery" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.span 
@@ -42,7 +42,7 @@ export default function Gallery() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-3xl aspect-[4/3] shadow-xl hover:shadow-2xl transition-all"
+              className="group relative overflow-hidden rounded-3xl aspect-4/3 shadow-xl hover:shadow-2xl transition-all"
             >
               <img 
                 src={image.url} 
@@ -50,7 +50,7 @@ export default function Gallery() {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/90 via-brand-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+              <div className="absolute inset-0 bg-linear-gradient from-transparent from-brand-primary/90 via-brand-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
                 <span className="text-brand-secondary font-bold text-xs uppercase tracking-widest mb-2">
                   {image.category}
                 </span>

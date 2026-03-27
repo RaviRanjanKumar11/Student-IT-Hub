@@ -30,3 +30,13 @@ html {
 .glass-card {
   @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl;
 }
+
+.team-marquee {
+  @apply inline-block;
+  animation: marquee 16s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}

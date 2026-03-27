@@ -93,19 +93,19 @@ export const testimonials = [
     name: "Anjali Sharma",
     role: "Software Engineer at TCS",
     content: "Ravi Sir's teaching style is unique. He makes complex C++ concepts so easy to understand. I owe my first job to Student IT Hub!",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150"
+    avatar: "https://img.freepik.com/premium-photo/asian-indian-college-student-focus-working-laptop-reading-book-while-other-classmates-background-outdoor-picture-university-campus_466689-7773.jpg"
   },
   {
     name: "Rahul Verma",
     role: "Full Stack Developer",
     content: "The React.js course was a game-changer for me. The hands-on projects helped me build a portfolio that recruiters loved.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150"
+    avatar: "https://img.freepik.com/free-photo/portrait-attractive-latin-student-doing-some-school-work-with-laptop-library_662251-1218.jpg?semt=ais_hybrid&w=740&q=80"
   },
   {
     name: "Priya Patel",
     role: "Python Developer",
     content: "I started as a complete beginner. Now I'm automating tasks at work using Python. Highly recommend Student IT Hub!",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&q=80&w=150&h=150"
+    avatar: "https://www.pngkey.com/png/detail/176-1760858_college-student-discounts-copy-indian-student-girl-png.png"
   }
 ];
 

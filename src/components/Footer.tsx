@@ -3,11 +3,11 @@ import { LOGO_URL } from '../constants';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gray-900 text-white py-2 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-        <div className="space-y-8">
-          <div className="flex items-center space-x-3">
-            <img src={LOGO_URL} alt="Logo" className="w-10 h-10 object-contain" referrerPolicy="no-referrer" />
+        <div className="space-y-4">
+          <div className="flex items-center space-x-1">
+            <img src={LOGO_URL} alt="Logo" className="w-24 h-24 object-contain" referrerPolicy="no-referrer" />
             <span className="text-2xl font-black tracking-tighter">STUDENT <span className="text-brand-secondary">IT HUB</span></span>
           </div>
           <p className="text-gray-400 text-sm leading-relaxed font-medium">
@@ -22,7 +22,7 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-sm font-bold uppercase tracking-wider mb-6">Quick Links</h4>
+          <h4 className="text-sm font-bold uppercase tracking-wider mb-4">Quick Links</h4>
           <ul className="space-y-4 text-sm text-gray-400">
             <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
             <li><a href="#courses" className="hover:text-white transition-colors">Courses</a></li>
@@ -59,7 +59,7 @@ export default function Footer() {
           </form>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-gray-800 text-center text-sm text-gray-500">
+      <div className="max-w-7xl mx-auto mt-2 pt-2 border-t border-gray-800 text-center text-sm text-gray-500">
         <p>© {new Date().getFullYear()} Student IT Hub. All rights reserved. Designed by Ravi Sir.</p>
       </div>
     </footer>
