@@ -15,7 +15,10 @@ const team = [
     name: "Ravi Sir",
     role: "Founder & Lead Instructor",
     image: ravi,
-    bio: "Software Developer with 3+ years of experience. Passionate about teaching and building scalable systems."
+    bio: "Software Developer with 3+ years of experience. Passionate about teaching and building scalable systems.",
+    github: "https://github.com/RaviRanjanKumar11",
+    linkedin: "https://www.linkedin.com/in/ravi-ranjan-kumar-753a39238/",
+    twitter: "https://twitter.com"
   }
 ];
 
@@ -97,9 +100,9 @@ export default function Team() {
                   />
                 </div>
                 <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex space-x-4 bg-white p-4 rounded-2xl shadow-xl border border-gray-100 opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
-                  <a href="#" className="text-brand-primary hover:text-brand-secondary transition-colors"><Github className="w-5 h-5" /></a>
-                  <a href="#" className="text-brand-primary hover:text-brand-secondary transition-colors"><Linkedin className="w-5 h-5" /></a>
-                  <a href="#" className="text-brand-primary hover:text-brand-secondary transition-colors"><Twitter className="w-5 h-5" /></a>
+                  <a href={member.github} target="_blank" rel="noreferrer" className="text-brand-primary hover:text-brand-secondary transition-colors"><Github className="w-5 h-5" /></a>
+                  <a href={member.linkedin} target="_blank" rel="noreferrer" className="text-brand-primary hover:text-brand-secondary transition-colors"><Linkedin className="w-5 h-5" /></a>
+                  <a href={member.twitter} target="_blank" rel="noreferrer" className="text-brand-primary hover:text-brand-secondary transition-colors"><Twitter className="w-5 h-5" /></a>
                 </div>
               </div>
               <div className="text-center">
